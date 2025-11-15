@@ -1,3 +1,6 @@
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -18,10 +21,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="black">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
+        <Hero />
         {children}
       </body>
     </html>
